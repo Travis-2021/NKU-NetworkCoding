@@ -1,0 +1,703 @@
+1.<meta>标签可用于：
+	# 编码UTF-8
+	<meta charset="UTF-8">  
+	# 屏幕自适应
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	# name属性可以为 keywords, author, description等
+	# content为对应的内容。
+	# 设置自动跳转
+	<meta http-equiv="refresh" content="0;http://fishc.taobao.com">
+	
+
+2.<style>标签可用于：
+	设置各个标签的样式 （也可用外部CSS代替）
+	<style>
+		body{
+			background-image:url("../img/1.png");
+		}
+		h1{
+			color:red;
+		}
+		a{
+			color:blue;
+			background:black;
+		}
+	
+	</style>
+	
+	# style中的属性 media="..."  
+	eg: print	# 表示打印时的样式
+		<style media="print"> ... </style>	
+	eg: screen	# 表示屏幕宽度在512px到1024px时的样式
+		<style media="screen and (min-width:512px) and (max-width:1024px)"> </style>
+	
+
+3.<link>标签可用于：
+	# 调用外部style， 将style内容设置为外部.css文件，即可调用（不带<style>标签）
+	eg:			# 样式表						路径
+		<link rel="stylesheet" type="text/css" href="style.css">
+	# 也有media属性（与<style>相同）
+	eg:	
+		<link rel="stylesheet" type="text/css" media="print" href="print.css">
+	# 更改网站图标
+	eg:
+		<link rel="icon" type="image/x-icon" href="../img/1.ico">
+	
+4.<base>标签可用于：
+	# 设置相对URL解析基准
+	eg:
+		<base href="http://baidu.com/" target="_blank">
+	这样接下来的a标签都会依此为基准形成url
+
+5.<script>标签可用于：
+	# 为HTML文件加外部脚本
+	eg:
+		<script type="text/javascript">
+			document.write("I love you");
+		</script>
+	# 也可以在导入外部js文件
+	eg:
+		<script type="text/javascript" src="wyx.js"> </script>
+	# 设置延迟执行（解析完HTML后再执行js） defer
+	eg:
+		<script type="text/javascript" src="wyx.js" defer> </script>
+	# <noscript>标签可用于在浏览器不支持脚本时显示
+	eg:
+		<noscript>
+			<p>这位鱼油，您的浏览器竟然不支持JavaScript</p>
+		</noscript>
+
+6.注释 
+	HTML: <!--注释-->
+	CSS: /* 注释 */
+	JavaScript: 同C/C++
+-----------6.20↑------------------------------------------------------
+7.块级、行内元素
+	# 块级元素换行，行内元素不换
+	# <br>用于换行
+	# HTML将连续空格解析为一个空格
+
+8.<pre>标签可用于：
+	# 保留文本预格式，不同于<p>,空格，tab都会解析进来，会得到等宽字体【所见即所得】
+	# 编程等宽字体：Source Code Pro
+	# 使用&# ; 或者 & ; 表示保留字符
+	eg:
+		&#60; / &lt; 表示 小于号<   
+9.<code>标签可用于：
+	# 显示代码
+10.	var：	定义变量
+	kbd：	定义输入
+	samp：	定义输出
+	eg:
+		<p> 定义变量<var>user_input</var>，用于接受用户输入 </p>
+		<p> 如果用户输入时<kbd>香蕉</kbd>,则打印<samp>你喜欢吃香蕉</samp> </p>
+11.【引用】
+	#【标签】	  【作用】 【显示】
+	# <q>:			行内引用 显示为 引号
+	# <blockquote>:	多行引用 显示为 每行缩进
+	# <cite>:		标题	 
+	eg:
+		<p><cite>《中国新说唱》</cite>有很多rapper</p>
+	# <abbr>:		缩写	 显示为 字体下有 "..." 鼠标放上，显示title属性内容
+	eg:
+		<p><abbr title="鱼C工作室">FishC.com</abbr>was founded in 2010.</p>
+	# <dfn>			术语	 
+	eg:
+		<p><dfn>HTML</dfn>是超文本标记语言</p>
+	# <address>		联系信息
+	eg:
+		<address>
+			<strong>联系我们</strong><br>
+			邮箱：<a href="1220798074@qq.com">1220798074@qq.com</a><br>
+			微信：1220798074wyx<br>
+		</address>
+	# <ruby>		注音	<rt> 注音内容	<rp>不支持rt>时显示的内容
+	eg:
+		<ruby>魑<rp>(</rp><rt>chi</rt><rp>)</rp></ruby>
+		<ruby>魅<rp>(</rp><rt>mei</rt><rp>)</rp></ruby>
+		<ruby>魍<rp>(</rp><rt>wang</rt><rp>)</rp></ruby>
+		<ruby>魉<rp>(</rp><rt>liang</rt><rp>)</rp></ruby>
+	# <bdo>			书写从左往右还是从右往左
+	eg:
+		<bdo dir="rlt"></bdo>		# rtl:right to left	
+									# ltr:left to right	
+	
+12.【格式化】	
+	 【标签】  【作用】
+	# <strong>	强调，粗体 
+	# <b>		粗体
+	# <em>		强调，斜体
+	# <i>		斜体
+	# 经常使用CSS来实现粗体，斜体 代替<b><i>
+	eg:
+		<style type="text/css">
+			.bold{font-weight:bolder;}
+			.italic{font-style:italic;}
+		</style>
+		
+		<p class="bold">这里是粗体</p>
+		<p class="italic">这里是斜体</p>
+	# <del>		删除线	【delete】
+	# <ins>		下划线	【insert】
+	# <s>		删除线	表示观点不正确
+	# <u>		下划线  表示拼写错误的单词/汉语中的专有名词
+	# <mark>	标记	显示为黄色
+	# <sup>		上标
+	# <sub>		下标
+	eg:
+		<p>E = mc<sup>2</sup><p>
+		<p>Mg +ZnSO<sub>4</sub> = MgSO<sub>4</sub> + Zn</p>
+	# <small>	字体变小
+	eg:
+		<p><small>本活动解释权归我们所有</small></p>
+13.无序列表(Unordered List)有序列表(Ordered List)定义列表(Definition List)
+	# 无序列表
+	eg:
+		<ul>
+			<li>Coffee</li>
+			<li>Tea</li>
+			<li>Water</li>
+		</ul>
+	# 有序列表
+	eg:
+		<ol>
+			<li>HTML5&CSS3</li>
+			<li>JavaScript</li>
+			<li>JQuery</li>	
+			<li>BootStrpt框架</li>	
+			<li>Vue框架</li>	
+			<li>PHP</li>	
+		</ol>
+	# 有序列表三个属性：
+		reversed:	降序
+		start:		起始值
+		type:		标记类型 如 1、A、a、i
+		
+	# 列表常用CSS属性：list-style-type、list-style-image
+	eg:
+		<style>
+			ul{ list-style-type:square;}
+		</style>
+		# 使用图片
+		<style>
+			ul{list-style-image:url("pic/1.png");
+		</style>
+	# 列表嵌套: 略
+	# 定义列表 <dl> <dt> <dd>
+	<dl>
+        <dt>HTML</dt>
+        <dd>制作网页的标准语言，控制网页的结构</dd>
+        <dt>CSS</dt>
+        <dd>层叠样式表，控制网页的样式</dd>
+        <dt>JavaScript</dt>
+        <dd>脚本语言，控制网页的行为</dd>
+    </dl>
+14.表格
+		<table> <tr>:table row  <th>:table header <td>:table data
+	eg:	# 设置表格样式
+		<style>
+			table{
+				border: 1px solid black;
+				border-collapse:collapse;
+			}
+			th,td{
+				border: 1px solid black;
+				padding:5px;	# 设置内边距
+			}
+			caption{
+				padding: 10px;	
+			}
+
+		</style>
+		# 设置表格
+		<table>
+			<caption>人物记录</caption>
+			<tr>
+				<th>姓名</th>
+				<th>年龄</th>
+			</tr>
+			<tr>
+				<td>王禹曦</td>
+				<td>20</td>
+			</tr>
+			<tr>
+				<td>吴宛泽</td>
+				<td>20</td>
+			</tr>
+			
+		</table>
+15.表格进一步知识<thead><tbody><tfoot>
+		<thead><tbody><tfoot>可以设置表头、主体、表尾，进而更加细致的设置CSS
+		
+		# 设置<thead>和<tbody>里面的th样式
+		thead th{
+			background:grey;
+			color:white;
+		}
+		tbody th{
+			background:lightgrey;
+			color:white;
+		}
+		# 表格实例
+		<table>
+		<caption>【有名网站】</caption>
+		<thead>
+			<tr>
+				<th>名称</th>
+				<th>网址</th>
+				<th>是否可访问</th>
+			</tr>
+		</head>
+		<tbody>
+			<tr>
+				<th>百度</th>
+				<td><a href="https://www.baidu.com">www.baidu.com</a></td>
+				<td>可以</td>
+			</tr>
+			<tr>
+				<th>Youtube</th>
+				<td><a href="https://www.youtube.com">www.youtube.com</a></td>
+				<td>不可以</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>		
+				<td colspan=3>以上资料来源于互联网</td>
+			</tr>
+		</tfoot>
+	</table>
+	<!--colspan属性-->: 跨列  
+	<!--rowspan属性-->: 跨行
+	# <colgroup><col>设置整个列
+	eg：设置第一列为红，第二、三列为绿
+		<colgroup>
+			<col style="background:red">
+			<col span="2" style="background:green">
+		</colgroup>
+--------------6.21↑---------------------------------------------------------
+16.表单form
+	eg:		<!--action指明处理所用文件-->	method为http方法：post/get
+		<form action="welcome.php" method="post">
+			账号：<input type="text" name="name"><br>
+			密码：<input type="password" name="password"><br>
+			<button type="submit">提交</button>
+			<button type="reset">重写</button>
+			<button type="submit" formmethod="get">GET</button>
+			<button type="submit" formmethod="post">POST</button>
+		</form>
+17.form的一些属性
+	# autocomplete 	自动填充，即浏览器保存记录，默认为"on"，可在form或input中设置。
+	# target		设置打开方式，如"_blank"
+	# value			设置默认值
+	# autofocus		自动聚焦，即打开网页后光标自动到指定input中
+	# disabled		使input无法输入，且不会提交
+	# readonly		使input无法输入，但会提交
+	eg:
+		<form action="welcome.php" target="_blank" method="post" autocomplete="off">
+			性别：<input type="text" value="女" name="sex" autocomplete="on" disabled><br>
+			名字：<input type="text" value="吴宛泽" name="name" readonly><br>
+			年龄：<input type="text" name="age"><br>
+			<button type="submit">提交</button>
+		</form>
+18.
+	# label标签，	可以使文本与input绑定
+	eg:
+		<label for="age">年龄：</label><input type="text" name="age" id="age">
+	# fieldset标签，可以在表单中分区域，显示为框框
+	# legend标签，	可以在fieldset中设置标题
+	eg:
+		<fieldset>
+			<legend>关键信息</legend>
+			<label for="age">年龄：</label><input type="text" name="age" id="age"><br>
+		</fieldset>
+	# select,option	设置选项
+	eg:
+		<select>	<!--value为对应post的值-->
+			<option value="female">女</option>
+			<option value="male">男</option>
+		</select>
+	# optgroup标签，可以将各个选项进行分组
+	eg:
+		<form>
+			课程：
+			<select>
+				<optgroup label="数据库">
+					<option>第1讲</option>
+					<option>第2讲</option>
+					<option>第3讲</option>
+				</optgroup>
+				<optgroup label="算法设计">
+					<option>第23讲</option>
+					<option>第24讲</option>
+					<option>第25讲</option>
+				</optgroup>
+				<optgroup label="计算机组成原理">
+					<option>第9讲</option>
+					<option>第10讲</option>
+					<option>第11讲</option>
+				</optgroup>
+			</select>
+		</form>
+19.input中type的值(1)
+	# submit、button、reset		可以替代button按钮
+	eg:
+		<form>
+			<input type="submit" value="提交">
+			<input type="reset" value="重置">
+			<input type="button" onclick="msg()" value="点我！">
+		</form>
+		<script>
+			function msg(){
+				alert("点我干嘛！哼！");
+			}
+		</script>
+	# radio		单选框			可以替代少量的select、option
+	eg:							<!--name必须相同，实现选项互斥的效果-->
+		<label><input type="radio" name="sex" value="male">男<label>
+		<label><input type="radio" name="sex" value="female">女<label>
+	# checkbox	复选框			可以替代 带multiple属性的select
+	eg:
+		<input type="checkbox" name="friends[]" value="wwz">吴宛泽
+		<input type="checkbox" name="friends[]" value="wyx">王禹曦
+		<input type="checkbox" name="friends[]" value="dxh">丁新航
+	# time、date、month、week、datetime-local
+	eg：
+		<label>时间：<input type="time" name="time"></label>
+		<label>日期：<input type="date" name="date"></label>
+		<label>年月：<input type="month" name="month"></label>
+		<label>星期：<input type="week" name="week"></label>
+		<label>本地日期和时间：<input type="datetime-local" name="datetime-local"></label>
+	# 补充知识
+		<!--url中出现的%** 是百分号编码，特殊字符的转义字符-->
+20.input中type的值(2)
+	# search	搜索框			形式与text类似，多个叉叉，具体搜索算法需要自己实现
+	eg:
+		你b站最喜欢的up主是谁？<input type="search" name="up">
+	# color		颜色选择框
+	eg:
+		<label>想买啥赛的？<input type="color" name="color"></label>
+	# image		图像按钮
+	eg：
+		<label>图片也可以实现按钮哦~<input type="image" src="pic/1.png" alt="图片"></label>
+	# hidden
+	eg：
+		<label><input type="hidden" value="看不到的input" disabled></label>
+----------6.22↑------------------------------------------------		
+21.input中type的值(3)
+	# file 		上传文件
+	eg:
+		<form action="welcome.php" enctype="multipart/form-data" method="post">
+			<input type="hidden" name="MAX_FILE_SIZE" value="1024">
+			请上传附件：<input type="file" name="file" accept="image/*" multiple><br>
+			<input type="submit" value="提交">
+		</form>
+	<!--
+		enctype="multipart/form-data"默认的上传文件，method必须为post
+		MAX_FILE_SIZE指定文件最大，value单位是字节
+		accept 指定上传文件类型，用逗号隔开
+		multiple指定可上传多个文件
+	-->
+22.input中type的值(4)	
+	# number	数字类型
+	eg:
+		几岁了小朋友？<input type="number" name="age" min="1" max="100" step="2">
+	<!--min,max,step 指定 最小值、最大值、步长-->
+	# range		数值滚动条
+	eg:
+		打分吧朋友...<input type="range" name="score" min="0" max="100" step="10">
+	# email、tel、url
+	eg:
+		邮箱：<input type="email" name="email" pattern="/^ [A-Za-z0-9]+([_\ .][A-Za-z0-9]+)*@([A-Za-z0-9\ -]+\ .)+[A-Za-z]{2,6}$/"><br>
+		电话：<input type="tel" name="tel" pattern="/^1[3|4|5|6|7|8|9]{1}[0-9]{9}/"><br>
+		网址：<input type="url" name="url" pattern="/^(((ht|f)tps?):\/\/)?([^!@#$%^&*?.\s-]([^!@#$%^&*?.\s]{0,63}[^!@#$%^&*?.\s])?\.)+[a-z]{2,6}\/?/"><br>	
+	<!--pattern的值为对应的正则表达式-->
+23.input中type的值(5)
+	# placeholder	”暗示字符“
+	# required		内容必填
+	# size			输入框显示长度
+	# maxlength		输入内容最大长度
+	eg:
+		<input type="text" placeholder="输入家庭住址" size="30" maxlength="22" required>
+	# list,datalist	
+		<form action="" method="post">
+		网站：<input type="url" name="http" placeholder="请输入网站" required size="50" maxlength="40" list="httplist">
+	</form>
+		<datalist id="httplist">
+			<option value="https://www.baidu.com">百度</option>
+			<option value="https://www.youtube.com">油管</option>
+			<option value="https://www.bilibili.com">b站</option>
+		</datalist>
+	<!--
+		datalist中设置id，list属性指明对应datalist
+	-->
+24.output、textarea
+	# output	输出
+	eg:
+		<form oninput="x.value=parseInt(a.value)+parseInt(b.value)" action="welcome.php" method="post">
+			0<input type="range" id="operand1" value="50" min="0" max="100">100+
+			<input type="number" id="operand2" value="50" min="0" max="100">=
+			<!--output显示结果-->
+			<output name="x" for="operand1 operand2">100</output>
+		</form>
+	# textarea	多行文本输入
+	eg:
+		<textarea name="saysth" rows="5" cols="30" wrap="har	d">锄禾日当午，汗滴禾下土；
+		</textarea>
+		<!--rows,cols指明行、列，单位为英文字符 # 中文字符=2*英文字符
+			wrap 可以为 soft、hard、off	与换行相关-->
+25.	div和语义化布局
+	# 原HTML需要在div中加入class，并在CSS中实现不同语义
+	# HTML5进行了更新，实现语义化布局，如
+	<header><nav><main><article><section><aside><footer><details><summary>
+26.语义结构举例
+	<section>
+		<details open>
+		<summary>南开大学简介</summary>
+		<p>南开大学，位于天津市，历史悠久，文化深远</p>
+		<p>选课系统：eamis.nankai.edu.cn;<br>
+		   你值得拥有；
+		</p>
+		</details>
+	</section>
+27.<map><area>，<picture><source>，<figure><figcaption>
+	# <map><area>标签	点击图片不同位置，跳出不同网站
+	eg:
+		<img alt="计组某图片" src="pic/1.png" usemap="#book">
+		<map name="book">
+			<!--circle: 圆心，半径-->
+			<area shape="circle" coords="50,50,50" alt="CPU" target="_blank" href="https://www.baidu.com">
+			<!--rect:左上角、右下角坐标-->
+			<area shape="rect" coords="100,100, 200,200" alt="中间" target="_blank" href="https://www.bilibili.com">
+			<!--ploy:n个点的坐标-->
+			<area shape="poly" coords="200,200, 250,200, 300,300, 250,300" alt="Web开发" target="_blank" href="https://www.bilibili.com/video/BV1QW411N762?p=27&vd_source=99f91d62fb25495d3e239fe33d2879e5">
+		</map>
+	# <picture><source>标签	实现网页界面不同大小显示不同图片
+	eg:
+		<picture>
+			<source media="(min-width:1024px)" srcset="pic/pig.png">
+			<source media="(min-width:512px)" srcset="pic/1.png">
+			<img src="pic/test6.ico" alt="ico文件" style="width:auto">
+		</picture>
+	# <figure><figcaption>标签	表示插图
+	eg:
+		<figure>
+			<img src="pic/pig.png" alt="猪啊你！">
+			<figcaption>插图标题</figcaption>
+		</figure>
+28.<video>标签	
+	<video src="pic/wps.mp4" width="800" height="600" poster="pic/alg.png" controls autoplay loop>WPS开头视频</video>
+	<!--
+		controls:	播放控件
+		autoplay:	自动播放（可能会受浏览器影响不会自动播放）
+		muted:		静音播放
+		preload:	预加载 	
+			value:	-auto		自动加载
+					-metadata	加载元数据(部分信息）
+					-none		不自动加载
+		poster:		设置封面
+		loop:		循环播放
+	-->
+29.<audio><track><source>
+	<audio src="pic/eng.mp3" controls>音频文件之英语听力</audio>
+	# 给视频加字母
+	eg:
+		<video src="pic/wps.mp4" width="800" height="600" poster="pic/alg.png" controls autoplay>
+			<track src="pic/track.vtt" srclang="zh" label="中文字幕" kind="subtitles" default>
+			WPS开头视频
+		</video>
+		# vtt文件有书写规范WebVTT，具体自行搜索，需要连接到服务器
+	# 给视频添加多个”备胎“
+	eg:
+		<video controls>
+			<source src="1.mp4" type="video/mp4">
+			<source src="2.webm" type="video/webm">
+			<source src="5.ogv" type="video/ogv">
+		</video>
+	<!--浏览器会加载直到成功为止-->
+30.<iframe><meter><progress>
+	# <iframe>	网页内嵌套网页
+	eg:
+		<iframe src="https:/www.bilibili.com" width="1024px" height="800px" sandbox="allow-popups">抱歉，您的浏览器不支持iframe</iframe>
+	<!--
+		由于网页来自第三方，因此浏览器设置sandbox操作提高安全性
+		sandbox的属性值表示允许的操作-->
+	# <meter>	显示管
+	eg:			<!--high为临界为高的值，low为低，optimum指定最优值-->
+		<meter id="money" high="0.8" low="0.2" optimum="0.6" value="0.2" min="0" max="1"></meter>
+	# <progress>进度条
+	eg:
+		<progress max="1" value="0.4"></progress>
+---------------6.23↑------------------------------------
+31.VSCode安装
+	略
+	Emmet可用于快速编辑代码
+32.CSS基本语法及注意事项
+	选择器 {属性:值; 属性:值;}
+
+	1.内联样式(Inline Style)
+	eg:
+		<p style="color:red; font-size: 14px;">I love HTML</p>
+		<p>I <span style="border:2px black dashed; padding:5px;">love</span> FishC.</p>
+	2.内部样式表(Internal Style Sheet)
+	eg:
+		<style>
+			h1{color:red;}
+			p{color:green; font-size: 14px;}
+			a{color:#ee82ee; border:2px black dashed; padding:5px;}
+		</style>
+	3.外部样式表(External Style Sheet)
+	eg:
+		<link rel="stylesheet" type="text/css" href="style.css">
+		style.css文件:
+			h1{color:red;}
+			p{color:green; font-size: 14px;}
+			a{color:#ee82ee; border:2px black dashed; padding:5px;}
+	4.注意事项：
+		内联样式>内部样式表>外部样式表
+		
+		
+	【CSS选择器分为以下五类】：
+		- 基本选择器
+		- 复合选择器
+		- 伪类选择器
+		- 伪元素选择器
+		- 属性选择器
+33.基本选择器
+	1)通用选择器：*
+	2)元素选择器：h1~h5,p,span,...
+	3)类选择器：
+	eg:
+		<head>中
+			.content{
+				text-indent: 2em;
+			}
+		<body>中
+			<p class="content">第二段</p>
+	4)id选择器：
+	eg:
+		<head>中
+			#ol{
+				color:red;
+			}
+		<body>中
+			<span id="ol">奥里给！</span>
+34.复合选择器
+	1)交集选择器
+		元素.类 / 元素#id
+	2)并集选择器
+		选择器1，选择器2，...
+	3)后代选择器
+		选择器1 选择器2
+	4)子元素选择器	（匹配直接后代）
+		选择器1 > 选择器2
+	eg:
+		body > .content 	匹配body的直接后代(比如<p>)的content类，而如果<p>标签内有<span>，无关其是否含有content。
+	5)相邻兄弟选择器
+		选择器1 + 选择器2
+		<!--匹配选择器1 相邻的 选择器2-->
+	6)通用兄弟选择器
+		选择器1 ~ 选择器2
+		<!--匹配选择器1 后的 所有选择器2【同一层级】-->
+35.伪元素选择器
+	1)::first-line
+		块级元素第一行
+	eg:
+	    p::first-line{
+            background-color: red;
+            color:green;
+        }
+	2)::first-letter
+		块级元素第一个字符，与上面类似
+	3)::before/::after选择器
+		在指定元素前后加内容
+	eg:
+	    a::before{
+            content:url("123.gif");
+        }
+        a::after{
+            content:"后面插";
+        }
+	4)::selection
+		鼠标左键选中部分时的样式
+36.动态伪类选择器
+	1):link,:visited,:hover,:active
+	eg:【通常用于<a>标签】：	显示时，访问后时，鼠标悬浮时，点击时
+	    a:link{	
+            color:pink;
+        }
+        a:visited{
+            color:brown;
+        }
+        a:hover{
+            color:white;
+        }
+        a:active{
+            color:black;
+        }
+		<!--也可用于其他，如<div>-->
+	2):focus
+		在鼠标聚焦时
+	eg:
+	    input#boy:focus{
+            background-color:cyan;
+        }
+        input#girl:focus{
+            background-color:pink;
+        }
+		男孩名字：<input type="text" name="boy" id="boy"><br>
+		女孩名字：<input type="text" name="girl" id="girl"><br>
+37.UI伪类选择器（上）
+	1):enabled/:disabled
+		输入框可用、不可用时
+	2):checked
+		单选框、复选框、下拉列表元素被选中时
+	eg:
+		:checked + span{
+            background-color: aquamarine;
+            color:red;
+        }
+		<input type="checkbox" name="banana" value="banana"><span>香蕉</span>
+		<input type="checkbox" name="apple" value="apple"><span>苹果</span>
+		<input type="checkbox" name="orange" value="orange"><span>橘子</span>
+	3):required/:optional
+		必选时、可选时
+	4):default
+		设置默认元素
+38.UI伪类选择器（下）
+	1):valid/:invalid
+		输入合法、不合法时
+	2):in-range/out-of-range【通常用于number】
+		范围内、超出范围
+	3):read-only/:read-write
+		只读、可读写
+39.结构伪类选择器
+	1):root【没啥卵用】
+		根元素
+	2):empty【没啥卵用】
+		空元素
+	3):first-child/:last-child
+		第一个子元素/最后一个子元素	<!--既是第一个/最后一个元素，又是该标签-->
+	4):only-child/:only-of-type
+		父元素中  唯一的子元素/唯一子类型	<!--一个是只能有一个这个类型标签且只有这一个标签/一个是只能有这一个类型的标签-->
+	5):first-of-type/last-of-type
+		与(3)对应，意思与(4)对应		<!--第一个/最后一个该标签即可-->
+40.其他伪类选择器与伪元素选择器区别
+	6)最后的结构伪类选择器
+		:nth-child(n)/:nth-of-type(n)
+		:nth-last-child(n)/:nth-last-of-child(n)
+	<!--用法与上面相同，含义表示第几个/倒数第几个，需要传参数n-->
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	

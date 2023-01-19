@@ -1,0 +1,5 @@
+D:/AllProjects/CLineC++/NetworkCode/TCP_basedon_UDP_3_2/cmake-build-debug/CMakeFiles/Server.dir
+D:/AllProjects/CLineC++/NetworkCode/TCP_basedon_UDP_3_2/cmake-build-debug/CMakeFiles/Client.dir
+D:/AllProjects/CLineC++/NetworkCode/TCP_basedon_UDP_3_2/cmake-build-debug/CMakeFiles/test.dir
+D:/AllProjects/CLineC++/NetworkCode/TCP_basedon_UDP_3_2/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/AllProjects/CLineC++/NetworkCode/TCP_basedon_UDP_3_2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,4 @@
+D:/AllProjects/CLineC++/NetworkCode/Lab5_RouterProgram/cmake-build-release/CMakeFiles/Lab5RouterProgram.dir
+D:/AllProjects/CLineC++/NetworkCode/Lab5_RouterProgram/cmake-build-release/CMakeFiles/test.dir
+D:/AllProjects/CLineC++/NetworkCode/Lab5_RouterProgram/cmake-build-release/CMakeFiles/edit_cache.dir
+D:/AllProjects/CLineC++/NetworkCode/Lab5_RouterProgram/cmake-build-release/CMakeFiles/rebuild_cache.dir

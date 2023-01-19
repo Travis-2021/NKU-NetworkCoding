@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8" addBOMForNewFiles="with BOM">
+    <file url="file://$PROJECT_DIR$/Client.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/ClientFunc.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Server.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/ServerFunc.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Support.cpp" charset="GBK" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

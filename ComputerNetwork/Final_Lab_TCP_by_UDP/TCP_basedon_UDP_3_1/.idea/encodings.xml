@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/Client.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Server.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Support.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Support.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/helloworld.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/recvfile/helloworld.txt" charset="GBK" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

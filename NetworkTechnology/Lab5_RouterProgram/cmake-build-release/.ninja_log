@@ -1,0 +1,14 @@
+# ninja log v5
+2	1174	6923806735682376	CMakeFiles/Lab5RouterProgram.dir/main.cpp.obj	1d334a9e45c4c7b1
+1206	1519	6923662783887235	Lab5RouterProgram.exe	b3c89275fcd32d00
+1	207	6923808017560704	build.ninja	ac3c5c4464fa4088
+2	2065	6923808052031647	CMakeFiles/Lab5RouterProgram.dir/main.cpp.obj	40aed75a74b10f8c
+2069	2304	6923808054305661	Lab5RouterProgram.exe	be0abc58411767af
+5	2276	6924420273860720	CMakeFiles/Lab5RouterProgram.dir/main.cpp.obj	40aed75a74b10f8c
+2277	2484	6924420275841034	Lab5RouterProgram.exe	be0abc58411767af
+4	1875	6924421532230957	CMakeFiles/Lab5RouterProgram.dir/main.cpp.obj	40aed75a74b10f8c
+1876	2084	6924421534351428	Lab5RouterProgram.exe	be0abc58411767af
+4	1959	6933258160888733	CMakeFiles/Lab5RouterProgram.dir/main.cpp.obj	40aed75a74b10f8c
+1960	2362	6933258164864767	Lab5RouterProgram.exe	be0abc58411767af
+4	2019	6934162590893015	CMakeFiles/Lab5RouterProgram.dir/main.cpp.obj	40aed75a74b10f8c
+2020	2191	6934162592533381	Lab5RouterProgram.exe	be0abc58411767af

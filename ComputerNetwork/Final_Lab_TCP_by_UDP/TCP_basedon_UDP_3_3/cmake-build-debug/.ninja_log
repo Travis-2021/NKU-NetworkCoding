@@ -1,0 +1,8 @@
+# ninja log v5
+3	1423	6939012330315044	CMakeFiles/Server.dir/Server.cpp.obj	69acc7ed35a8e34
+1329	1484	6939015358866959	Server.exe	e96e6529d201d6c8
+4	1329	6939015357376765	CMakeFiles/Server.dir/Support.cpp.obj	b8f0e70210627db1
+1495	1689	6939015404307192	Client.exe	9d28153111a3015f
+37	770	6938983337679683	CMakeFiles/Client.dir/FileUtil.cpp.obj	80d388563a1dee00
+14	1378	6939015401276712	CMakeFiles/Client.dir/Support.cpp.obj	efe0b4e9954a2c9
+3	1494	6939015402406903	CMakeFiles/Client.dir/Client.cpp.obj	10ca5d729c09bd76
